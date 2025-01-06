@@ -1,0 +1,5 @@
+Comentarios para cada producto (Alta,modificar y likes)
+Dar calificacion a un producto (Luego de que llego el producto)
+Filtros de comentarios y productos
+Ver productos antes de comprar
+Suscripciones

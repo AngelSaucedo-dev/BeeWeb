@@ -1,0 +1,51 @@
+/*
+Custom Css
+*/
+#mapa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+#mapa iframe{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.InfoTra {
+    display: flex;            
+    justify-content: center;  
+    padding: 20px;           
+}
+
+.tabTi{
+    font-weight: bolder;
+}
+.InfoTra table {
+    width: 60%;              
+    border-collapse: collapse; 
+}
+
+.InfoTra tr {
+    border: 1px solid black;  
+    padding: 20px;            
+    text-align: left;       
+}
+
+.InfoTra td{
+    padding: 20px;
+    height: 25px;
+}
+
+.btn-success {
+    color: #000;
+}
