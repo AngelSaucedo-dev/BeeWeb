@@ -2,12 +2,17 @@
     include "database.php";
     
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (!empty($_POST['producto']) && !empty($_POST['cantidad']) && !empty($_POST['costo']) 
-            && !empty($_POST['message']) && !empty($_POST['miSelect']) && isset($_FILES['ImgProd'])
-            && ($_FILES['ImgProd']['error'] === UPLOAD_ERR_OK)){
-            //header('Content-Type: application/json');
-            
-            $archivoInfo = $_FILES['ImgProd']; 
+        exit;
+    }
+
+    if (empty($_POST['producto']) && empty($_POST['cantidad']) && empty($_POST['costo']) 
+            && empty($_POST['message']) && empty($_POST['miSelect']) && isset($_FILES['ImgProd'])
+            && ($_FILES['ImgProd']['error'] !== UPLOAD_ERR_OK)){
+                echo json_encode(['success' => false, 'error' => 'Haz dejado campos vacios']);
+                exit;         
+    }
+
+    $archivoInfo = $_FILES['ImgProd']; 
             $destino = "../imgProductos/";
             
             $strProducto = $_POST['producto'];
@@ -65,9 +70,5 @@
                 echo json_encode(['success' => false, 'error' => 'Error al conectar a la base de datos.']);
                 exit();
             }
-        } else {
-            echo json_encode(['success' => false, 'error' => 'Haz dejado campos vacios']);
-            exit;
-        }
-    }
+
 ?>
