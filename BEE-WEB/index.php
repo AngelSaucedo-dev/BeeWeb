@@ -1,13 +1,3 @@
-<?php include("assets/scripts/login.php");
-// Verificar si se ha hecho clic en el botón de visitante
-/*
-if (isset($_POST['visitante'])) {
-    // Crear la cookie 'visitante' para identificar al visitante
-    setcookie('visitante', 'true', time() + (86400 * 30), "/"); // La cookie durará 30 días
-    // Redirigir al usuario a la página principal o la que desees
-    header("Location: Clientes/cliente.php");
-    exit();
-}*/?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,7 +44,8 @@ if (isset($_POST['visitante'])) {
     <div class="contenedor">
         <div class="formus">
             <form method="post" action="">
-                <h2 id="titulo">Login</h2>                
+                <h2 id="titulo">Login</h2>
+                <?php include("assets/scripts/login.php"); ?>
                 <label for="usuario">Usuario: </label>
                 <input type="text" name="txtUser" id="usuario" maxlenght="15" autocomplete="off">
                 <label for="passwd">Contraseña: </label>
